@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+
+    
+<!-- Mirrored from www.shreethemes.in/quickgen/layouts/page_maintenance.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Apr 2020 13:56:59 GMT -->
+<head>
+        <meta charset="utf-8" />
+        <title>Quickgen - Multipurpose</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
+        <meta name="keywords" content="bootstrap 4, premium, marketing, multipurpose" />
+        <meta content="Shreethemes" name="author" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <!-- BOOTSTRAP -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- ICONS -->
+        <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/fontawesome.css" rel="stylesheet" type="text/css" />
+        <link href="css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css" />
+        <!-- CSS -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+        <!-- Loader -->
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner">
+                    <div class="cube1"></div>
+                    <div class="cube2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ERROR PAGE -->
+        <section class="section bg-home" style="background-image: url('images/home/bg-maintenance.jpg');">
+            <div class="bg-overlay"></div>
+            <div class="home-center">
+                <div class="home-desc-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-center error-page">
+                                <a href="index-2.html">
+                                    <img src="images/logo-light.png" alt="missing_logo" height="30">
+                                    <div class="spacer-30"></div>
+                                </a>
+                                <h3 class="text-custom f-36">Oups, There Is A problem</h3>
+                                <h4 class="text-white f-36 mb-3">System Is Under Maintenance</h4>
+                                <div class="text-center">
+                                    <div id="clock">
+                                        <p>
+                                            <span id="hours"></span>
+                                            Hours
+                                        </p>
+                                        <div class="space">:</div>
+                                        <p>
+                                            <span id="minutes"></span>
+                                            Minutes
+                                        </p>
+                                        <div class="space">:</div>
+                                        <p>
+                                            <span id="seconds"></span>
+                                            Seconds
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="index-2.html" class="btn btn-custom mt-3">Go Back Home</a>
+                            </div>
+                        </div>
+                    </div> <!-- end container -->
+                </div>
+            </div>
+        </section>
+        <!-- ERROR PAGE -->
+
+        <!-- javascript -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/menu.js"></script>
+        <!-- Portfolio -->
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.countdown.js"></script>
+        <!-- Main Js -->
+        <script src="js/app.js"></script>
+        <script>
+            // Javascript
+            $(function() {
+              var currentDate = new Date();
+              $('div#clock').countdown(60 * 60 * 1000 + currentDate.valueOf(), function(event) {
+                $this = $(this);
+                switch(event.type) {
+                  case "seconds":
+                  case "minutes":
+                  case "hours":
+                  case "daysLeft":
+                    $this.find('span#'+event.type).html(event.value);
+                    break;
+                  case "finished":
+                    $this.fadeTo('slow', .5);
+                    break;
+                }
+              });
+            });
+        </script>
+    </body>
+
+
+<!-- Mirrored from www.shreethemes.in/quickgen/layouts/page_maintenance.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Apr 2020 13:57:19 GMT -->
+</html>
